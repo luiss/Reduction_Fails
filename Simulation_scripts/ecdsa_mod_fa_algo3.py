@@ -75,18 +75,7 @@ def recover_mod_pk(r, s, e, nf, p):
     """
     if r % p == 0:
         return None
-
-    # a = 1
-    # pa = p
-    #
-    # while (s % pa == 0) and (r % pa != 0) and (nf % pa == 0):
-    #     pa *= p
-    #     a += 1
-    #
-    # a -= 1
-    # pa //= p
-    #
-    # if a <= 0:
+        
     if s % p != 0:
         return None
 
